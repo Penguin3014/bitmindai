@@ -27,45 +27,41 @@
 </head>
 <body class="bg-gray-900 text-white">
 
-    <!-- ===== 헤더 ===== -->
-    <header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
-        <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
-            <!-- 로고 -->
-            <a href="#" class="text-2xl font-bold text-green-500">
-                BitMindAI
-            </a>
-            
-            <!-- 데스크탑 네비게이션 -->
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#features" class="text-gray-300 hover:text-green-400 transition-colors">서비스 특징</a>
-                <a href="#cases" class="text-gray-300 hover:text-green-400 transition-colors">성공사례</a>
-                <a href="contact.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium transition-colors">
-                    문의하기
-                </a>
-            </nav>
-
-            <!-- 모바일 메뉴 버튼 -->
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- ===== 모바일 메뉴 (숨겨진 상태) ===== -->
-    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 md:hidden">
-        <div class="flex justify-end p-4 h-16 border-b border-gray-700">
-            <button id="mobile-close-btn" class="text-white p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-close"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-        </div>
-        <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
-            <a href="#features" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">서비스 특징</a>
-            <a href="#cases" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">성공사례</a>
-            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium text-xl mobile-link">
-                문의하기
-            </a>
+<!-- ===== 헤더 (통일된 버전) ===== -->
+<header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
+    <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
+        <!-- 로고 (클릭 시 메인 페이지로 이동) -->
+        <a href="/" class="text-2xl font-bold text-green-500">
+            BitMindAI
+        </a>
+        
+        <!-- 데스크탑 네비게이션 -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="/company" class="text-gray-300 hover:text-green-400 transition-colors">회사 소개</a>
+            <a href="/service" class="text-gray-300 hover:text-green-400 transition-colors">서비스 소개</a>
+            <a href="/contact" class="text-gray-300 hover:text-green-400 transition-colors">문의하기</a>
         </nav>
+
+        <!-- 모바일 메뉴 버튼 -->
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
     </div>
+</header>
+
+<!-- ===== 모바일 메뉴 (통일된 버전) ===== -->
+<div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="flex justify-end p-4 h-16 border-b border-gray-700">
+        <button id="mobile-close-btn" class="text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-close"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+    </div>
+    <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
+        <a href="/company" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">회사 소개</a>
+        <a href="/service" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">서비스 소개</a>
+        <a href="/contact" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">문의하기</a>
+    </nav>
+</div>
 
     <!-- ===== 메인 컨텐츠 ===== -->
     <main>
@@ -215,6 +211,7 @@
 
 </body>
 </html>
+
 
 
 
