@@ -58,26 +58,26 @@
     <main>
 
         <!-- 1. 히어로 섹션 -->
-        <section id="hero" class="pt-40 pb-20 text-center relative overflow-hidden">
-            <div class="absolute inset-0 -z-10 opacity-30">
-                <div class="absolute top-0 left-1/4 w-96 h-96 bg-green-900 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
-                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-900 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-4000"></div>
-            </div>
-            <div class="container mx-auto max-w-4xl px-4">
-                <!-- ===== 제목 크기 및 줄 간격 수정 ===== -->
-                <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-bold leading-normal mb-6">
-                    최대한 많은 프로그램을<br>
-                    <span class="text-green-400">경험하고 방문해주세요</span>
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                    그래야 BitMindAI가 더욱 빛날테니까요.<br>
-                    우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
-                </p>
-                <a data-aos="fade-up" data-aos-delay="400" href="/contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                    지금 문의하기
-                </a>
-            </div>
-        </section>
+       <section id="hero" class="pt-40 pb-20 text-center relative overflow-hidden">
+  <picture>
+    <source srcset="/images/hero-main.avif" type="image/avif">
+    <source srcset="/images/hero-main.webp" type="image/webp">
+    <img src="/images/hero-main.jpg" alt="BitMindAI 메인 배경" width="1200" height="600" loading="lazy" decoding="async" style="max-width:100%;height:auto; border-radius:24px; box-shadow:0 8px 32px #0002;">
+  </picture>
+  <div class="container mx-auto max-w-4xl px-4">
+    <h1 class="text-5xl md:text-7xl font-bold leading-normal mb-6">
+      최대한 많은 프로그램을<br>
+      <span class="text-green-400">경험하고 방문해주세요</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+      그래야 BitMindAI가 더욱 빛날테니까요.<br>
+      우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
+    </p>
+    <a href="/contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+      지금 문의하기
+    </a>
+  </div>
+</section>
 
         <!-- 2. 핵심 가치 (Features) -->
         <section id="features" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
@@ -171,3 +171,4 @@
     </script>
 </body>
 </html>
+
