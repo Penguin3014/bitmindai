@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사 소개 - BitMindAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html { scroll-behavior: smooth; } body { font-family: 'Inter', 'Noto Sans KR', sans-serif; } .header-blur { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: rgba(17, 24, 39, 0.8); }</style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- 헤더 (모든 페이지 공통) -->
+    <header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
+        <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-green-500">BitMindAI</a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="/company" class="text-green-400 font-semibold">회사 소개</a>
+                <a href="/service" class="text-gray-300 hover:text-green-400 transition-colors">서비스 소개</a>
+                <a href="/contact" class="text-gray-300 hover:text-green-400 transition-colors">문의하기</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">...</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full ...">...</div>
+
+    <!-- 메인 컨텐츠 -->
+    <main>
+        <section class="pt-32 pb-20 text-center">
+            <div class="container mx-auto max-w-3xl px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">회사 소개</h1>
+                <p class="text-lg text-gray-400">BitMindAI는 시장을 이기는 본질에 집중합니다.</p>
+                <!-- 여기에 회사 소개 내용을 자유롭게 채워넣으세요 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 (모든 페이지 공통) -->
+    <footer class="py-12 border-t border-gray-700">...</footer>
+    <script>...</script>
+</body>
+</html>

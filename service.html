@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스 소개 - BitMindAI</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 아이콘 라이브러리 (모바일 메뉴용) -->
+    <script src="https://unpkg.com/lucide-react/dist/umd/lucide-react.js"></script>
+    <style>
+        /* 부드러운 스크롤 적용 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Inter 폰트 기본 적용 */
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+        /* 헤더 배경 블러 처리 */
+        .header-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- ===== 헤더 (현재 페이지 '서비스 소개' 강조) ===== -->
+    <header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
+        <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
+            <!-- 로고 (클릭 시 메인 페이지로 이동) -->
+            <a href="/" class="text-2xl font-bold text-green-500">
+                BitMindAI
+            </a>
+            
+            <!-- 데스크탑 네비게이션 -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="/company" class="text-gray-300 hover:text-green-400 transition-colors">회사 소개</a>
+                <a href="/service" class="text-green-400 font-semibold">서비스 소개</a>
+                <a href="/contact" class="text-gray-300 hover:text-green-400 transition-colors">문의하기</a>
+            </nav>
+
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== 모바일 메뉴 (새로운 메뉴 적용) ===== -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-end p-4 h-16 border-b border-gray-700">
+            <button id="mobile-close-btn" class="text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-close"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
+            <a href="/company" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">회사 소개</a>
+            <a href="/service" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">서비스 소개</a>
+            <a href="/contact" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">문의하기</a>
+        </nav>
+    </div>
+
+    <!-- ===== 메인 컨텐츠 ===== -->
+    <main>
+        <!-- 1. 페이지 제목 섹션 -->
+        <section class="pt-32 pb-16 text-center">
+            <div class="container mx-auto max-w-4xl px-4">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                    BitMindAI 서비스
+                </h1>
+                <p class="text-lg text-gray-400">
+                    데이터 기반의 자동매매 솔루션으로 시장을 이끄는 전략을 경험하세요.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. 서비스 상세 내용 섹션 (카드 UI 재활용) -->
+        <section id="features" class="py-10 pb-20">
+            <div class="container mx-auto max-w-6xl px-4">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 서비스 카드 1 -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">AI 기반 자동매매</h3>
+                        <p class="text-gray-300">
+                            머신러닝 알고리즘이 24시간 시장을 분석하여 최적의 매매 타이밍을 포착합니다. 감정에 휘둘리지 않는 냉철한 투자를 경험하세요.
+                        </p>
+                    </div>
+                    <!-- 서비스 카드 2 -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">리스크 관리 시스템</h3>
+                        <p class="text-gray-300">
+                            시장 변동성에 대응하는 자동 손절 및 분할 매매 시스템으로 리스크를 최소화하고 안정적인 자산 관리를 지원합니다.
+                        </p>
+                    </div>
+                    <!-- 서비스 카드 3 -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">실시간 포트폴리오</h3>
+                        <p class="text-gray-300">
+                            웹 대시보드를 통해 언제 어디서든 나의 투자 현황과 수익률을 투명하게 확인하고 전략을 수정할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="py-12 border-t border-gray-700">
+        <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
+            <p class="font-semibold text-gray-300 text-lg mb-4">BitMindAI</p>
+            <p class="mb-2 text-sm">
+                대표: 홍길동 | 사업자등록번호: 000-00-00000<br>
+                주소: 서울특별시 강남구 테헤란로 000 (역삼동)<br>
+                문의: [contact@bitmindai.kr](mailto:contact@bitmindai.kr) | 대표번호: 02-0000-0000
+            </p>
+            <p class="text-xs">
+                © 2025 BitMindAI. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript (모바일 메뉴용) ===== -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        mobileCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+
+</body>
+</html>
