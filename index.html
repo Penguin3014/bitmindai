@@ -49,9 +49,11 @@
   <!-- Hero Section: 이미지 꽉차게, 여러 포맷 자동 선택 -->
   <section id="hero" class="w-full min-h-[45vw] md:min-h-[600px] relative text-center overflow-hidden flex flex-col justify-center items-center">
     <picture>
-      <source srcset="/images/MAIN_INDEX.avif" type="image/avif">
-      <source srcset="/images/MAIN_INDEX.webp" type="image/webp">
-      <img src="/images/MAIN_INDEX.jpg" alt="블록체인 네트워크 배경" class="w-full h-[45vw] md:h-[600px] object-cover block" style="min-width:100vw;" loading="lazy" decoding="async">
+      <!-- AVIF, WebP가 있다면 브라우저가 우선적으로 사용합니다. -->
+      <source srcset="/images/hero-main.avif" type="image/avif">
+      <source srcset="/images/hero-main.webp" type="image/webp">
+      <!-- 최종적으로 JPG 이미지를 불러옵니다. 이 파일만 있어도 정상 동작합니다. -->
+      <img src="/images/hero-main.jpg" alt="블록체인 네트워크 배경" class="w-full h-[45vw] md:h-[600px] object-cover block" style="min-width:100vw;" loading="lazy" decoding="async">
     </picture>
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-gray-900/10 to-black/60 z-10"></div>
     <div class="container mx-auto max-w-4xl px-4 z-20 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
