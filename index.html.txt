@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinAuto - 자동매매 솔루션</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 아이콘 라이브러리 (모바일 메뉴용) -->
+    <script src="https://unpkg.com/lucide-react/dist/umd/lucide-react.js"></script>
+    <style>
+        /* 부드러운 스크롤 적용 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Inter 폰트 기본 적용 */
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+        /* 헤더 배경 블러 처리 */
+        .header-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8); /* bg-gray-900 with 80% opacity */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- ===== 헤더 ===== -->
+    <header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
+        <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
+            <!-- 로고 -->
+            <a href="#" class="text-2xl font-bold text-green-500">
+                COINAUTO
+            </a>
+            
+            <!-- 데스크탑 네비게이션 -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-green-400 transition-colors">서비스 특징</a>
+                <a href="#cases" class="text-gray-300 hover:text-green-400 transition-colors">성공사례</a>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium transition-colors">
+                    무료 체험 문의
+                </a>
+            </nav>
+
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== 모바일 메뉴 (숨겨진 상태) ===== -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-end p-4 h-16 border-b border-gray-700">
+            <button id="mobile-close-btn" class="text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-close"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
+            <a href="#features" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">서비스 특징</a>
+            <a href="#cases" class="text-gray-300 hover:text-green-400 text-2xl mobile-link">성공사례</a>
+            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium text-xl mobile-link">
+                무료 체험 문의
+            </a>
+        </nav>
+    </div>
+
+    <!-- ===== 메인 컨텐츠 ===== -->
+    <main>
+
+        <!-- 1. 히어로 섹션 -->
+        <section id="hero" class="pt-32 pb-20 text-center relative overflow-hidden">
+            <!-- 배경 그라데이션 효과 -->
+            <div class="absolute inset-0 -z-10 opacity-30">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-green-900 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-900 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-4000"></div>
+            </div>
+            
+            <div class="container mx-auto max-w-4xl px-4">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    최대한 많은 프로그램을<br>
+                    <span class="text-green-400">경험하고 방문해주세요</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                    그래야 COINAUTO가 더욱 빛날테니까요.
+                    우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
+                </p>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105">
+                    지금 무료 체험 시작하기
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. 핵심 가치 (Features) -->
+        <section id="features" class="py-20 bg-gray-800">
+            <div class="container mx-auto max-w-6xl px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                    우리는 <span class="text-green-400">본질</span>에 집중합니다
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 카드 1 -->
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">체험 우선 정책</h3>
+                        <p class="text-gray-300">
+                            프로그램을 써보지도 않고 구매하실 수는 없습니다.
+                            저희 프로그램을 직접 사용해 보시고, 그 성능과 신뢰를 경험한 후 구매를 결정하세요.
+                        </p>
+                    </div>
+                    <!-- 카드 2 -->
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">장기 투자 지향</h3>
+                        <p class="text-gray-300">
+                            일확천금을 꿈꾸는 고객은 받지 않습니다.
+                            우리는 나무가 아닌 숲을 바라보며, 전체적인 시장 흐름을 읽는 투자 전략을 중시합니다.
+                        </p>
+                    </div>
+                    <!-- 카드 3 -->
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">진정성 있는 소통</h3>
+                        <p class="text-gray-300">
+                            성의 없는 문의는 프로그램 사용 의지가 없다고 판단합니다.
+                            진정성 있는 소통을 통해 고객의 성공적인 투자를 함께 고민합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 성공 사례 (Social Proof) -->
+        <section id="cases" class="py-20">
+            <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+                <!-- 텍스트 영역 -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        "정말 자동매매로<br>
+                        <span class="text-green-400">이런 결과가 가능할까요?"</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8">
+                        자신 있는 프로그램은 성공사례부터 공개합니다.
+                        투명한 데이터를 통해 COINAUTO의 압도적인 성능을 직접 확인하세요.
+                    </p>
+                    <a href="#" class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-gray-900 px-6 py-3 rounded-md text-lg font-semibold transition-colors">
+                        성공사례 더보기 ↗
+                    </a>
+                </div>
+                
+                <!-- 이미지/그래프 플레이스홀더 -->
+                <div class="bg-gray-800 border border-gray-700 rounded-lg shadow-xl h-80 flex items-center justify-center p-8">
+                    <p class="text-gray-500 text-xl">[성공 사례 그래프 또는 데이터 예시]</p>
+                    <!-- 예: <img src="placeholder.jpg" alt="성공 사례 그래프"> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 문의하기 (CTA) -->
+        <section id="contact" class="py-20 bg-gray-800">
+            <div class="container mx-auto max-w-3xl px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    지금 바로 <span class="text-green-400">무료 체험</span>을 신청하세요
+                </h2>
+                <p class="text-lg text-gray-400 mb-10">
+                    왜 COINAUTO가 다른지 직접 경험해볼 기회입니다.<br>
+                    아래 버튼을 눌러 문의를 남겨주시면 전문가가 상담을 도와드립니다.
+                </p>
+                <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-xl font-semibold transition-transform hover:scale-105">
+                    카카오톡으로 문의하기
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="py-12 border-t border-gray-700">
+        <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
+            <p class="font-semibold text-gray-300 text-lg mb-4">COINAUTO</p>
+            <p class="mb-2 text-sm">
+                대표: 홍길동 | 사업자등록번호: 000-00-00000<br>
+                주소: 서울특별시 강남구 테헤란로 000 (역삼동)<br>
+                문의: contact@coinauto.com | 대표번호: 02-0000-0000
+            </p>
+            <p class="text-xs">
+                © 2025 COINAUTO. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // 모바일 메뉴 열기
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // 모바일 메뉴 닫기
+        mobileCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // 모바일 메뉴 링크 클릭 시 메뉴 닫기
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+
+</body>
+</html>
