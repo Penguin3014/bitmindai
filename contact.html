@@ -81,7 +81,7 @@
                 최대한 구체적으로 작성해 주실수록 더욱 정확한 안내를 받아보실 수 있습니다.
             </p>
 
-          <!-- ===== 문의 폼 (Formspree 및 동의 체크박스 적용) ===== -->
+    <!-- ===== 문의 폼 (개인정보 처리방침 전문 적용) ===== -->
 <form action="https://formspree.io/f/xeopydva" method="POST" class="text-left space-y-6 bg-gray-800 p-8 rounded-lg border border-gray-700">
     
     <!-- 이름 입력란 -->
@@ -102,22 +102,42 @@
         <textarea name="message" id="message" rows="6" required class="w-full bg-gray-700 border-gray-600 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500"></textarea>
     </div>
 
-    <!-- ===== 개인정보 수집 및 이용 동의 (새로 추가된 부분) ===== -->
+    <!-- ===== 개인정보 수집 및 이용 동의 (새로운 내용 적용) ===== -->
     <div>
         <!-- 스크롤 가능한 약관 텍스트 박스 -->
-        <div class="text-xs text-gray-400 bg-gray-900 border border-gray-700 rounded-md p-3 h-24 overflow-y-auto">
-            <p class="font-semibold mb-2">개인정보 수집 및 이용 동의</p>
-            <p>BitMindAI는 문의 사항에 대한 원활한 상담 및 답변을 위해 아래와 같이 최소한의 개인정보를 수집 및 이용합니다.</p><br>
-            <p>1. 수집 항목: 이름, 이메일, 문의 내용</p>
-            <p>2. 수집 및 이용 목적: 문의 사항 확인 및 답변 회신</p>
-            <p>3. 보유 및 이용 기간: 수집된 정보는 문의 처리 완료 후 1년간 보관되며, 이후 안전하게 파기됩니다.</p><br>
-            <p>동의를 거부할 권리가 있으나, 거부 시 문의 접수가 제한될 수 있습니다.</p>
+        <div class="text-xs text-gray-400 bg-gray-900 border border-gray-700 rounded-md p-4 h-32 overflow-y-auto">
+            <p class="font-semibold mb-2">제1조 (개인정보의 처리목적)</p>
+            <p class="mb-2">회사는 다음의 목적을 위하여 개인정보를 처리합니다...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제2조 (개인정보의 처리 및 보유기간)</p>
+            <p class="mb-2">① 회사는 법령에 따른 개인정보 보유, 이용 기간...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제3조(정보주체 및 법정대리인의 권리와 그 행사 방법)</p>
+            <p class="mb-2">① 정보주체는 회사에 대해 언제든지 다음 각 호의...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제4조(개인정보의 파기)</p>
+            <p class="mb-2">① 회사는 개인정보 보유 기간의 경과, 처리목적 달성 등...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제5조(개인정보의 안전성 확보조치)</p>
+            <p class="mb-2">회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제6조(개인정보 자동 수집 장치의 설치∙운영 및 거부에 관한 사항)</p>
+            <p class="mb-2">① 회사는 이용자에게 개별적인 맞춤 서비스를 제공하기 위해...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제7조(개인정보 열람청구)</p>
+            <p class="mb-2">정보주체는 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제8조(권익침해 구제 방법)</p>
+            <p class="mb-2">정보주체는 아래의 기관에 대해 개인정보 침해에 대한...</p>
+            
+            <p class="font-semibold mt-3 mb-2">제9조(개인정보 처리방침 시행 및 변경)</p>
+            <p>이 개인정보 처리방침은 2024.12.21부터 적용됩니다.</p>
         </div>
         <!-- 동의 체크박스 -->
         <div class="flex items-center mt-3">
             <input id="consent" name="consent" type="checkbox" required class="h-4 w-4 rounded border-gray-600 text-green-600 focus:ring-green-500 bg-gray-700">
             <label for="consent" class="ml-2 block text-sm text-gray-300">
-                개인정보 수집 및 이용에 동의합니다.
+                개인정보 처리방침에 동의합니다.
             </label>
         </div>
     </div>
@@ -130,6 +150,7 @@
         </button>
     </div>
 </form>
+
 
 
 
@@ -175,6 +196,7 @@
 
 </body>
 </html>
+
 
 
 
