@@ -21,9 +21,20 @@
         .header-blur {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            background-color: rgba(17, 24, 39, 0.8); /* bg-gray-900 with 80% opacity */
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+        /* 애니메이션을 위한 미세한 배경 효과 */
+        .animate-pulse {
+            animation-duration: 8s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
         }
     </style>
+    
+    <!-- AOS 라이브러리 CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+       
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -67,7 +78,7 @@
     <main>
 
         <!-- 1. 히어로 섹션 -->
-        <section id="hero" class="pt-32 pb-20 text-center relative overflow-hidden">
+        <section id="hero" class="pt-40 pb-20 text-center relative overflow-hidden">
             <!-- 배경 그라데이션 효과 -->
             <div class="absolute inset-0 -z-10 opacity-30">
                 <div class="absolute top-0 left-1/4 w-96 h-96 bg-green-900 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
@@ -75,16 +86,15 @@
             </div>
             
             <div class="container mx-auto max-w-4xl px-4">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold leading-tight mb-6">
                     최대한 많은 프로그램을<br>
                     <span class="text-green-400">경험하고 방문해주세요</span>
                 </h1>
-<p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-    그래야 BitMindAI가 더욱 빛날테니까요.<br>
-    우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
-</p>
-
-                <a href="/contact" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105">
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                    그래야 BitMindAI가 더욱 빛날테니까요.<br>
+                    우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
+                </p>
+                <a data-aos="fade-up" data-aos-delay="400" href="/contact" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105">
                     지금 문의하기
                 </a>
             </div>
@@ -93,12 +103,12 @@
         <!-- 2. 핵심 가치 (Features) -->
         <section id="features" class="py-20 bg-gray-800">
             <div class="container mx-auto max-w-6xl px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-center mb-12">
                     우리는 <span class="text-green-400">본질</span>에 집중합니다
                 </h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- 카드 1 -->
-                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                    <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
                         <h3 class="text-2xl font-semibold mb-4 text-green-400">체험 우선 정책</h3>
                         <p class="text-gray-300">
                             프로그램을 써보지도 않고 구매하실 수는 없습니다.
@@ -106,7 +116,7 @@
                         </p>
                     </div>
                     <!-- 카드 2 -->
-                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
                         <h3 class="text-2xl font-semibold mb-4 text-green-400">장기 투자 지향</h3>
                         <p class="text-gray-300">
                             일확천금을 꿈꾸는 고객은 받지 않습니다.
@@ -114,7 +124,7 @@
                         </p>
                     </div>
                     <!-- 카드 3 -->
-                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
+                    <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600/50">
                         <h3 class="text-2xl font-semibold mb-4 text-green-400">진정성 있는 소통</h3>
                         <p class="text-gray-300">
                             성의 없는 문의는 프로그램 사용 의지가 없다고 판단합니다.
@@ -127,7 +137,7 @@
 
         <!-- 3. 성공 사례 (Social Proof) -->
         <section id="cases" class="py-20">
-            <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
                 <!-- 텍스트 영역 -->
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
@@ -146,27 +156,25 @@
                 <!-- 이미지/그래프 플레이스홀더 -->
                 <div class="bg-gray-800 border border-gray-700 rounded-lg shadow-xl h-80 flex items-center justify-center p-8">
                     <p class="text-gray-500 text-xl">[성공 사례 그래프 또는 데이터 예시]</p>
-                    <!-- 예: <img src="placeholder.jpg" alt="성공 사례 그래프"> -->
                 </div>
             </div>
         </section>
 
-<!-- 4. 문의하기 (CTA) - 수정된 버전 -->
-<section id="contact" class="py-20 bg-gray-800">
-    <div class="container mx-auto max-w-3xl px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            궁금한 점이 있으신가요?
-        </h2>
-        <p class="text-lg text-gray-400 mb-10">
-            Bitmind AI의 전문가가 직접 상담을 도와드립니다.<br>
-            아래 버튼을 눌러 문의를 남겨주세요.
-        </p>
-        <a href="contact.html" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-xl font-semibold transition-transform hover:scale-105">
-            문의 페이지로 이동
-        </a>
-    </div>
-</section>
-
+        <!-- 4. 문의하기 (CTA) -->
+        <section id="contact" class="py-20 bg-gray-800">
+            <div class="container mx-auto max-w-3xl px-4 text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    궁금한 점이 있으신가요?
+                </h2>
+                <p class="text-lg text-gray-400 mb-10">
+                    Bitmind AI의 전문가가 직접 상담을 도와드립니다.<br>
+                    아래 버튼을 눌러 문의를 남겨주세요.
+                </p>
+                <a href="contact.html" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-xl font-semibold transition-transform hover:scale-105">
+                    문의 페이지로 이동
+                </a>
+            </div>
+        </section>
 
     </main>
 
@@ -192,17 +200,14 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // 모바일 메뉴 열기
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-full');
         });
 
-        // 모바일 메뉴 닫기
         mobileCloseBtn.addEventListener('click', () => {
             mobileMenu.classList.add('translate-x-full');
         });
 
-        // 모바일 메뉴 링크 클릭 시 메뉴 닫기
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
@@ -210,11 +215,14 @@
         });
     </script>
 
+    <!-- AOS 라이브러리 JS 및 초기화 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // 애니메이션 지속 시간 (ms)
+            once: true,    // 한 번만 애니메이션 실행
+        });
+    </script>
+       
 </body>
 </html>
-
-
-
-
-
-
