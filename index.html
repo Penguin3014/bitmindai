@@ -62,20 +62,22 @@
   </div>
 </header>
 
-<!-- 모바일 메뉴 -->
-<div id="mobile-menu" class="fixed inset-0 bg-gray-50 z-40 transform translate-x-full transition-transform duration-300 md:hidden">
-  <div class="flex justify-end p-4 h-16 border-b border-gray-200">
-    <button id="mobile-close-btn" class="text-black p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+<!-- 모바일 메뉴 수정 -->
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-40 transform translate-x-full transition-transform duration-300 md:hidden" style="background-image: url('images/bg-dark-green-gradient.png'); background-size: cover; background-position: center;">
+  <div class="flex justify-end p-4 h-16 border-b border-gray-700/70">
+    <button id="mobile-close-btn" class="text-white p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
   </div>
-  <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-10">
-    <a href="company.html" class="text-black font-black text-xl hover:text-green-600 mobile-link">회사 소개</a>
-    <a href="service.html" class="text-black font-black text-xl hover:text-green-600 mobile-link">서비스 소개</a>
-    <a href="faq.html" class="text-black font-black text-xl hover:text-green-600 mobile-link">FAQ</a>
-    <a href="contact.html" class="text-black font-black text-xl hover:text-green-600 mobile-link">문의하기</a>
+  <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-12">
+    <a href="index.html" class="text-green-400 font-bold text-5xl hover:text-green-600 mobile-link">홈</a>
+    <a href="company.html" class="text-green-400 font-bold text-5xl hover:text-green-600 mobile-link">회사 소개</a>
+    <a href="service.html" class="text-green-400 font-bold text-5xl hover:text-green-600 mobile-link">서비스 소개</a>
+    <a href="faq.html" class="text-green-400 font-bold text-5xl hover:text-green-600 mobile-link">FAQ</a>
+    <a href="contact.html" class="text-green-400 font-bold text-5xl hover:text-green-600 mobile-link">문의하기</a>
   </nav>
 </div>
+
 
 
 <main>
@@ -195,5 +197,6 @@
 <script>AOS.init({duration: 800,once: true});</script>
 </body>
 </html>
+
 
 
