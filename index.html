@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitMindAI - 데이터 기반 자동매매 솔루션</title>
 
   <!-- 오픈그래프/트위터 카드 이미지 및 정보 -->
@@ -16,16 +16,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', 'Noto Sans KR', sans-serif; }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    }
     /* FAQ 부드러운 애니메이션 */
     details[open] .faq-content {
-      animation: faqOpen 0.5s cubic-bezier(.4,.32,.18,1.17);
+      animation: faqOpen 0.5s cubic-bezier(0.4, 0.32, 0.18, 1.17);
       max-height: 500px;
       opacity: 1;
     }
     .faq-content {
-      transition: max-height 0.5s cubic-bezier(.4,.32,.18,1.17), opacity 0.5s;
+      transition: max-height 0.5s cubic-bezier(0.4, 0.32, 0.18, 1.17), opacity 0.5s;
       overflow: hidden;
       max-height: 500px;
       opacity: 1;
@@ -35,172 +39,184 @@
       opacity: 0;
     }
     @keyframes faqOpen {
-      0% { max-height: 0; opacity: 0; }
-      100% { max-height: 500px; opacity: 1; }
+      0% {
+        max-height: 0;
+        opacity: 0;
+      }
+      100% {
+        max-height: 500px;
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body class="bg-gradient-to-b from-gray-900 to-black text-white">
 
-<!-- ===== 헤더 ===== -->
-<header class="w-full fixed top-0 left-0 z-50 bg-gray-50 border-b border-gray-200">
-  <div class="container mx-auto max-w-6xl px-4 h-20 flex justify-between items-center">
-    <a href="/" class="flex items-center space-x-4">
-      <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-12 w-auto" />
-      <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
-    </a>
-    <nav class="hidden md:flex items-center space-x-10">
-      <!-- 글꼴 크기 한 사이즈 줄임: text-xl -->
-      <a href="company.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
-      <a href="service.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
-      <a href="faq.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
-      <a href="contact.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">문의하기</a>
+  <!-- ===== 헤더 ===== -->
+  <header class="w-full fixed top-0 left-0 z-50 bg-gray-50 border-b border-gray-200">
+    <div class="container mx-auto max-w-6xl px-4 h-20 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-4">
+        <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-12 w-auto" />
+        <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-10">
+        <a href="company.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
+        <a href="service.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+        <a href="faq.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
+        <a href="contact.html" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">문의하기</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-black p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 모바일 메뉴 -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 md:hidden"
+    style="background: linear-gradient(135deg, rgba(70, 70, 70, 0.95) 0%, rgba(40, 40, 40, 0.95) 100%);">
+    <div class="flex justify-end p-4 h-16 border-b border-gray-600/50">
+      <button id="mobile-close-btn" class="text-white p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
+      <a href="index.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">홈</a>
+      <a href="company.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">회사 소개</a>
+      <a href="service.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">서비스 소개</a>
+      <a href="faq.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">FAQ</a>
+      <a href="contact.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">문의하기</a>
     </nav>
-    <button id="mobile-menu-btn" class="md:hidden text-black p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-    </button>
   </div>
-</header>
 
-<!-- 모바일 메뉴 수정 -->
-<div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 md:hidden"
-  style="background: linear-gradient(135deg, rgba(60, 60, 60, 0.95) 0%, rgba(30, 30, 30, 0.95) 100%);">
-  <div class="flex justify-end p-4 h-16 border-b border-gray-600/50">
-    <button id="mobile-close-btn" class="text-white p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-    </button>
-  </div>
-  <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
-    <a href="index.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">홈</a>
-    <a href="company.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">회사 소개</a>
-    <a href="service.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">서비스 소개</a>
-    <a href="faq.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">FAQ</a>
-    <a href="contact.html" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">문의하기</a>
-  </nav>
-</div>
-
-
-
-
-<main>
-  <!-- Hero Section: 이미지 및 메인 텍스트 (모바일 대응) -->
-  <section class="relative w-full min-h-[400px] md:h-[600px] overflow-hidden flex items-center justify-center pt-20 md:pt-24 pb-6">
-    <img src="images/hero-main.jpg" alt="블록체인 네트워크 배경" class="w-full h-full object-cover block absolute inset-0 z-0" />
-    <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
-    <div class="relative z-20 text-center w-full px-4">
-      <h1 class="text-3xl md:text-7xl font-bold leading-loose mb-6 drop-shadow-lg">
-        최대한 많은 프로그램을<br>
-        <span class="text-green-400">경험하고 방문해주세요</span>
-      </h1>
-      <p class="text-base md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 drop-shadow">
-        그래야 BitMindAI가 더욱 빛날테니까요.<br>우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
-      </p>
-      <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">지금 문의하기</a>
-    </div>
-  </section>
-
-  <!-- 주요 컨텐츠 -->
-  <section id="features" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
-    <div class="container mx-auto max-w-6xl px-4 text-center">
-      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">우리는 <span class="text-green-400">본질</span>에 집중합니다</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold mb-4 text-green-400">체험 우선 정책</h3>
-          <p class="text-gray-300">프로그램을 써보지도 않고 구매하실 수는 없습니다. 저희 프로그램을 직접 사용해 보시고, 성능과 신뢰를 경험한 후 결정하세요.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold mb-4 text-green-400">장기 투자 지향</h3>
-          <p class="text-gray-300">일확천금을 꿈꾸는 고객은 받지 않습니다. 전체 시장 흐름을 읽는 투자 전략을 중시합니다.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold mb-4 text-green-400">진정성 있는 소통</h3>
-          <p class="text-gray-300">성의 없는 문의는 프로그램 사용 의지가 없다고 판단합니다. 진정성 있는 소통으로 고객의 성공적인 투자를 함께 고민합니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 성공 사례 섹션 -->
-  <section id="cases" class="relative py-20 min-h-[500px] flex items-center justify-center">
-    <div class="absolute inset-0 w-full h-full" style="background-image: url('images/bg-bitmindai.svg'); background-size: cover; background-position: center; background-attachment: fixed; z-index: 0;"></div>
-    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-    <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center relative z-20">
-      <div class="text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
-          "정말 자동매매로<br><span class="text-green-400">이런 결과가 가능할까요?"</span>
-        </h2>
-        <p class="text-lg text-gray-200 mb-8">
-          자신 있는 프로그램은 성공사례부터 공개합니다.<br>
-          투명한 데이터를 통해 BitMindAI의 성능을 확인하세요.
+  <main>
+    <!-- Hero Section: 이미지 및 메인 텍스트 (모바일 대응) -->
+    <section class="relative w-full min-h-[400px] md:h-[600px] overflow-hidden flex items-center justify-center pt-20 md:pt-24 pb-6">
+      <img src="images/hero-main.jpg" alt="블록체인 네트워크 배경" class="w-full h-full object-cover block absolute inset-0 z-0" />
+      <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+      <div class="relative z-20 text-center w-full px-4">
+        <h1 class="text-3xl md:text-7xl font-bold leading-loose mb-6 drop-shadow-lg">
+          최대한 많은 프로그램을<br>
+          <span class="text-green-400">경험하고 방문해주세요</span>
+        </h1>
+        <p class="text-base md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 drop-shadow">
+          그래야 BitMindAI가 더욱 빛날테니까요.<br>우리는 단기 수익이 아닌, 시장을 이기는 본질에 집중합니다.
         </p>
-        <a href="#" class="inline-block border border-green-500 text-green-500 hover:bg-green-500 hover:text-gray-900 px-6 py-3 rounded-md text-lg font-semibold transition-all duration-300">
-          성공사례 더보기 ↗
-        </a>
+        <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">지금 문의하기</a>
       </div>
-      <div class="bg-gray-800 border border-gray-700 rounded-lg shadow-xl h-80 flex items-center justify-center p-8">
-        <p class="text-gray-500 text-xl">[성공 사례 그래프 또는 데이터 예시]</p>
-      </div>
-    </div>  
-  </section>
+    </section>
 
-   <!-- FAQ 섹션 -->
-  <section id="faq" class="py-20 bg-gray-800">
-    <div class="container mx-auto max-w-4xl px-4 text-white text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12">FAQ - 자주 묻는 질문</h2>
-      <div class="space-y-6 max-w-3xl mx-auto text-left">
-        <details class="border-4 border-gray-700 rounded-lg p-6">
-          <summary class="cursor-pointer text-xl font-bold text-green-400">프로그램을 체험해볼 수 있나요?</summary>
-          <div class="faq-content mt-2 text-gray-300 text-base">네, 저희는 체험 우선 정책을 운영하고 있어 프로그램을 실제로 사용해 보신 뒤 구매를 결정할 수 있습니다.</div>
-        </details>
-        <details class="border-4 border-gray-700 rounded-lg p-6">
-          <summary class="cursor-pointer text-xl font-bold text-green-400">자동매매 프로그램은 어떻게 동작하나요?</summary>
-          <div class="faq-content mt-2 text-gray-300 text-base">시장 데이터를 분석하여 알고리즘에 따라 자동으로 매매가 이루어집니다. 리스크 관리 기능도 포함되어 있습니다.</div>
-        </details>
-        <details class="border-4 border-gray-700 rounded-lg p-6">
-          <summary class="cursor-pointer text-xl font-bold text-green-400">구매 전 문의는 어떻게 하나요?</summary>
-          <div class="faq-content mt-2 text-gray-300 text-base">문의하기 섹션 또는 문의 페이지에서 직접 상담 요청을 하실 수 있습니다.</div>
-        </details>
+    <!-- 주요 컨텐츠 -->
+    <section id="features" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+      <div class="container mx-auto max-w-6xl px-4 text-center">
+        <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">우리는 <span class="text-green-400">본질</span>에 집중합니다</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">체험 우선 정책</h3>
+            <p class="text-gray-300">프로그램을 써보지도 않고 구매하실 수는 없습니다. 저희 프로그램을 직접 사용해 보시고, 성능과 신뢰를 경험한 후 결정하세요.</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">장기 투자 지향</h3>
+            <p class="text-gray-300">일확천금을 꿈꾸는 고객은 받지 않습니다. 전체 시장 흐름을 읽는 투자 전략을 중시합니다.</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700/50 transition-all duration-300 hover:shadow-green-900/50 hover:-translate-y-2">
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">진정성 있는 소통</h3>
+            <p class="text-gray-300">성의 없는 문의는 프로그램 사용 의지가 없다고 판단합니다. 진정성 있는 소통으로 고객의 성공적인 투자를 함께 고민합니다.</p>
+          </div>
+        </div>
       </div>
-      <!-- FAQ 페이지 보러가기(폰트 한 사이즈 작게) -->
-      <div class="mt-8 text-center">
-        <a href="faq.html" class="inline-block text-center text-lg md:text-xl bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-105 border-2 border-green-400">
-          더 자세한 내용은 FAQ 페이지에서 확인해주세요
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 문의 섹션 -->
-  <section id="contact" class="py-20 bg-gray-800">
-    <div class="container mx-auto max-w-3xl px-4 text-center" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">궁금한 점이 있으신가요?</h2>
-      <p class="text-lg text-gray-400 mb-8">BitMindAI 전문가가 직접 상담을 도와드립니다.<br>언제든 문의를 남겨주세요.</p>
-      <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white px-10 py-6 rounded-full text-2xl font-extrabold transition-all duration-300 transform hover:scale-105 shadow-lg">문의하기</a>
+    <!-- 성공 사례 섹션 -->
+    <section id="cases" class="relative py-20 min-h-[500px] flex items-center justify-center">
+      <div class="absolute inset-0 w-full h-full" style="background-image: url('images/bg-bitmindai.svg'); background-size: cover; background-position: center; background-attachment: fixed; z-index: 0;"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+      <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center relative z-20">
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+            "정말 자동매매로<br><span class="text-green-400">이런 결과가 가능할까요?"</span>
+          </h2>
+          <p class="text-lg text-gray-200 mb-8">
+            자신 있는 프로그램은 성공사례부터 공개합니다.<br>
+            투명한 데이터를 통해 BitMindAI의 성능을 확인하세요.
+          </p>
+          <a href="#" class="inline-block border border-green-500 text-green-500 hover:bg-green-500 hover:text-gray-900 px-6 py-3 rounded-md text-lg font-semibold transition-all duration-300">
+            성공사례 더보기 ↗
+          </a>
+        </div>
+        <div class="bg-gray-800 border border-gray-700 rounded-lg shadow-xl h-80 flex items-center justify-center p-8">
+          <p class="text-gray-500 text-xl">[성공 사례 그래프 또는 데이터 예시]</p>
+        </div>
+      </div>  
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section id="faq" class="py-20 bg-gray-800">
+      <div class="container mx-auto max-w-4xl px-4 text-white text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12">FAQ - 자주 묻는 질문</h2>
+        <div class="space-y-6 max-w-3xl mx-auto text-left">
+          <details class="border-4 border-gray-700 rounded-lg p-6">
+            <summary class="cursor-pointer text-xl font-bold text-green-400">프로그램을 체험해볼 수 있나요?</summary>
+            <div class="faq-content mt-2 text-gray-300 text-base">네, 저희는 체험 우선 정책을 운영하고 있어 프로그램을 실제로 사용해 보신 뒤 구매를 결정할 수 있습니다.</div>
+          </details>
+          <details class="border-4 border-gray-700 rounded-lg p-6">
+            <summary class="cursor-pointer text-xl font-bold text-green-400">자동매매 프로그램은 어떻게 동작하나요?</summary>
+            <div class="faq-content mt-2 text-gray-300 text-base">시장 데이터를 분석하여 알고리즘에 따라 자동으로 매매가 이루어집니다. 리스크 관리 기능도 포함되어 있습니다.</div>
+          </details>
+          <details class="border-4 border-gray-700 rounded-lg p-6">
+            <summary class="cursor-pointer text-xl font-bold text-green-400">구매 전 문의는 어떻게 하나요?</summary>
+            <div class="faq-content mt-2 text-gray-300 text-base">문의하기 섹션 또는 문의 페이지에서 직접 상담 요청을 하실 수 있습니다.</div>
+          </details>
+        </div>
+        <!-- FAQ 페이지 보러가기(폰트 한 사이즈 작게) -->
+        <div class="mt-8 text-center">
+          <a href="faq.html" class="inline-block text-center text-lg md:text-xl bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-105 border-2 border-green-400">
+            더 자세한 내용은 FAQ 페이지에서 확인해주세요
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="py-20 bg-gray-800">
+      <div class="container mx-auto max-w-3xl px-4 text-center" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">[translate:궁금한 점이 있으신가요?]</h2>
+        <p class="text-lg text-gray-400 mb-8">[translate:BitMindAI 전문가가 직접 상담을 도와드립니다.]<br>[translate:언제든 문의를 남겨주세요.]</p>
+        <a href="contact.html" class="inline-block bg-green-600 hover:bg-green-700 text-white px-10 py-6 rounded-full text-2xl font-extrabold transition-all duration-300 transform hover:scale-105 shadow-lg">[translate:문의하기]</a>
+      </div>
+    </section>
+  </main>
+  <footer class="py-12 border-t border-gray-700">
+    <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
+      <p class="font-semibold text-gray-300 text-lg mb-4">[translate:BitMindAI]</p>
+      <p class="mb-2 text-sm">[translate:대표:] 윤태욱 | [translate:사업자등록번호:] 000-00-00000<br>[translate:주소:] 서울특별시 강남구 테헤란로 000 ([translate:역삼동])<br>[translate:문의:] <a href="mailto:contact@BitMindAI.com" class="underline text-gray-400 hover:text-green-400">contact@BitMindAI.com</a> | [translate:대표번호:] 02-0000-0000</p>
+      <p class="text-xs">© 2025 BitMindAI. [translate:All Rights Reserved.]</p>
     </div>
-  </section>
-</main>
-<footer class="py-12 border-t border-gray-700">
-  <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
-    <p class="font-semibold text-gray-300 text-lg mb-4">BitMindAI</p>
-    <p class="mb-2 text-sm">대표: 윤태욱 | 사업자등록번호: 000-00-00000<br>주소: 서울특별시 강남구 테헤란로 000 (역삼동)<br>문의: <a href="mailto:contact@BitMindAI.com" class="underline text-gray-400 hover:text-green-400">contact@BitMindAI.com</a> | 대표번호: 02-0000-0000</p>
-    <p class="text-xs">© 2025 BitMindAI. All Rights Reserved.</p>
-  </div>
-</footer>
-<script>
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileCloseBtn = document.getElementById('mobile-close-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
-  mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('translate-x-full'); });
-  mobileCloseBtn.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); });
-  mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); }); });
-</script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({duration: 800,once: true});</script>
+  </footer>
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('translate-x-full')) {
+        mobileMenu.classList.remove('translate-x-full');
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+      }
+    });
+    mobileCloseBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+    });
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
-
-
-
-
