@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ - BitMindAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react/dist/umd/lucide-react.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+        .header-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+        .parallax {
+            background-image: url('/images/bg-bitmindai.svg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary:before {
+            content: "▶";
+            display: inline-block;
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        details[open] summary:before {
+            transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- 헤더 동일 -->
+    <header class="w-full fixed top-0 left-0 z-50 header-blur border-b border-gray-700/50">
+        <div class="container mx-auto max-w-6xl px-4 h-16 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-green-500">BitMindAI</a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="/company" class="text-gray-300 hover:text-green-400 transition-colors">회사 소개</a>
+                <a href="/service" class="text-gray-300 hover:text-green-400 transition-colors">서비스 소개</a>
+                <a href="/faq" class="text-green-400 font-semibold">FAQ</a>
+                <a href="/contact" class="text-gray-300 hover:text-green-400 transition-colors">문의하기</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
+            </button>
+        </div>
+    </header>
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 md:hidden" aria-hidden="true">
+        <div class="flex justify-end p-4 h-16 border-b border-gray-700">
+            <button id="mobile-close-btn" class="text-white p-2" aria-label="메뉴 닫기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-close"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8" role="menu">
+            <a href="/company" class="text-gray-300 hover:text-green-400 text-2xl mobile-link" role="menuitem">회사 소개</a>
+            <a href="/service" class="text-gray-300 hover:text-green-400 text-2xl mobile-link" role="menuitem">서비스 소개</a>
+            <a href="/faq" class="text-gray-300 hover:text-green-400 text-2xl mobile-link" role="menuitem">FAQ</a>
+            <a href="/contact" class="text-gray-300 hover:text-green-400 text-2xl mobile-link" role="menuitem">문의하기</a>
+        </nav>
+    </div>
+
+    <main class="pt-32 pb-20">
+        <section class="text-center max-w-4xl mx-auto px-4 mb-20">
+            <h1 class="text-4xl font-bold mb-6">FAQ - 자주 묻는 질문</h1>
+            <p class="text-lg text-gray-400 mb-10">아래 자주 묻는 질문을 참고하시고,<br>추가 궁금한 점은 문의하기 페이지를 이용해주세요.</p>
+        </section>
+
+        <section class="container mx-auto max-w-4xl px-4 space-y-6">
+            <details class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-md" open>
+                <summary class="text-xl font-semibold cursor-pointer text-green-400 select-none">프로그램을 체험해볼 수 있나요?</summary>
+                <p class="mt-3 text-gray-300 leading-relaxed">네, 저희는 체험 우선 정책을 운영하고 있어 프로그램을 실제로 사용해 보신 뒤 구매를 결정할 수 있습니다.</p>
+            </details>
+            <details class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-md">
+                <summary class="text-xl font-semibold cursor-pointer text-green-400 select-none">자동매매 프로그램은 어떻게 동작하나요?</summary>
+                <p class="mt-3 text-gray-300 leading-relaxed">시장 데이터를 분석하여 알고리즘에 따라 자동으로 매매가 이루어집니다. 리스크 관리 기능도 포함되어 있습니다.</p>
+            </details>
+            <details class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-md">
+                <summary class="text-xl font-semibold cursor-pointer text-green-400 select-none">구매 전 문의는 어떻게 하나요?</summary>
+                <p class="mt-3 text-gray-300 leading-relaxed">문의하기 페이지에서 직접 상담 요청을 하실 수 있습니다.</p>
+            </details>
+        </section>
+
+        <section class="text-center mt-16 mb-32">
+            <p class="text-gray-400 text-lg">
+                더 궁금한 내용은 <a href="/contact" class="text-green-400 underline hover:text-green-600 font-semibold">문의하기</a> 페이지에서 확인해주세요.
+            </p>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-gray-700">
+        <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
+            <p class="font-semibold text-gray-300 text-lg mb-4">BitMindAI</p>
+            <p class="mb-2 text-sm">
+                대표: 윤태욱 | 사업자등록번호: 000-00-00000<br />
+                주소: 서울특별시 강남구 테헤란로 000 (역삼동)<br />
+                문의: <a href="mailto:contact@BitMindAI.com" class="underline text-gray-400 hover:text-green-400">contact@BitMindAI.com</a> | 대표번호: 02-0000-0000
+            </p>
+            <p class="text-xs">© 2025 BitMindAI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+        });
+        mobileCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+        });
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
