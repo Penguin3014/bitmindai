@@ -11,7 +11,8 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', 'Noto Sans KR', sans-serif; }
         .header-blur { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: rgba(17, 24, 39, 0.8); }
-        details summary::-webkit-details-marker { display: none; }
+        summary { list-style: none; }
+        summary::-webkit-details-marker { display: none; }
         details summary:before {
             content: "▶";
             display: inline-block;
