@@ -63,15 +63,23 @@
     </nav>
   </div>
 
-    <main class="pt-32 pb-24 bg-gray-900">
-        <section class="text-center max-w-4xl mx-auto px-4 mb-20" data-aos="fade-up">
-            <h1 class="text-5xl md:text-6xl font-black mb-6">
-                자주 묻는 질문 <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">(FAQ)</span>
-            </h1>
-            <p class="text-lg text-gray-400">BitMindAI에 대해 궁금한 모든 것을 해결해 드립니다.</p>
-        </section>
+    <main>
+        <!-- ============================================= -->
+        <!-- 패럴랙스 배경을 적용할 섹션 시작                  -->
+        <!-- ============================================= -->
+        <div class="relative bg-fixed bg-cover bg-center" style="background-image: url('images/faq.jpg');">
+            <!-- 어두운 오버레이 -->
+            <div class="absolute inset-0 bg-black/80"></div>
+            
+            <div class="relative pt-32 pb-24">
+                <section class="text-center max-w-4xl mx-auto px-4 mb-20" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-black mb-6">
+                        자주 묻는 질문 <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">(FAQ)</span>
+                    </h1>
+                    <p class="text-lg text-gray-400">BitMindAI에 대해 궁금한 모든 것을 해결해 드립니다.</p>
+                </section>
 
-        <section class="container mx-auto max-w-7xl px-4">
+                <section class="container mx-auto max-w-7xl px-4">
             <!-- FAQ 그리드 컨테이너 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
@@ -155,7 +163,13 @@
                 <a href="/contact" class="text-green-400 underline hover:text-green-500 font-semibold transition-colors">전문가에게 직접 문의하기</a>
             </p>
         </section>
+            </div>
+        </div>
+        <!-- ============================================= -->
+        <!-- 패럴랙스 배경 섹션 끝                          -->
+        <!-- ============================================= -->
     </main>
+
 
     <footer class="py-16 bg-black border-t border-gray-800">
         <div class="container mx-auto max-w-7xl px-4 text-center text-gray-500">
