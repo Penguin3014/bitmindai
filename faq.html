@@ -12,7 +12,7 @@
     <style>
         html { scroll-behavior: smooth; }
         body { 
-            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif; 
             background-color: #0A0A0A;
         }
         summary::-webkit-details-marker { display: none; }
@@ -29,17 +29,17 @@
 <body class="bg-black text-white">
 
    <!-- ===== 헤더 ===== -->
-  <header class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
+  <header class="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200/50">
     <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
       <a href="/" class="flex items-center space-x-3">
-        <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-10 w-auto" />
+        <img src="assets/images/common/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-10 w-auto" />
         <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
       </a>
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="/company" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">회사 소개</a>
-        <a href="/service" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">서비스 소개</a>
-        <a href="/faq" class="text-green-600 font-bold text-lg transition-colors duration-200">FAQ</a>
-        <a href="/contact" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
+        <a href="/company.html" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">회사 소개</a>
+        <a href="/service.html" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+        <a href="/faq.html" class="text-green-600 font-bold text-lg transition-colors duration-200">FAQ</a>
+        <a href="/contact.html" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
       </nav>
       <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -56,19 +56,15 @@
     </div>
     <nav class="flex flex-col items-center justify-center h-[calc(100vh-5rem)] space-y-10">
       <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
-      <a href="/company" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
-      <a href="/service" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
-      <a href="/faq" class="text-green-500 font-bold text-3xl mobile-link">FAQ</a>
-      <a href="/contact" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
+      <a href="/company.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
+      <a href="/service.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
+      <a href="/faq.html" class="text-green-500 font-bold text-3xl mobile-link">FAQ</a>
+      <a href="/contact.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
     </nav>
   </div>
 
     <main>
-        <!-- ============================================= -->
-        <!-- 패럴랙스 배경을 적용할 섹션 시작                  -->
-        <!-- ============================================= -->
-        <div class="relative bg-fixed bg-cover bg-center" style="background-image: url('images/faq.jpg');">
-            <!-- 어두운 오버레이 -->
+        <div class="relative bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('assets/images/faq/faq.jpg');">
             <div class="absolute inset-0 bg-black/80"></div>
             
             <div class="relative pt-32 pb-24">
@@ -80,96 +76,91 @@
                 </section>
 
                 <section class="container mx-auto max-w-7xl px-4">
-            <!-- FAQ 그리드 컨테이너 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="100">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        프로그램을 체험해볼 수 있나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">네, BitMindAI는 체험 우선 정책을 운영하며, 실제 사용 경험 후 구매를 결정하실 수 있습니다. 전문가 상담을 통해 자세한 안내를 받으실 수 있습니다.</div>
-                </details>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="100">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                프로그램을 체험해볼 수 있나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">네, BitMindAI는 체험 우선 정책을 운영하며, 실제 사용 경험 후 구매를 결정하실 수 있습니다. 전문가 상담을 통해 자세한 안내를 받으실 수 있습니다.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="150">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        자동매매는 어떤 원리로 작동하나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">AI와 여러 투자 전략을 조합하여 실시간 시장 데이터를 분석, 신호가 발생하면 자동으로 주문을 실행합니다. 리스크 관리 알고리즘이 내장되어 있어 효율적인 포트폴리오 운용이 가능합니다.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="150">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                자동매매는 어떤 원리로 작동하나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">AI와 여러 투자 전략을 조합하여 실시간 시장 데이터를 분석, 신호가 발생하면 자동으로 주문을 실행합니다. 리스크 관리 알고리즘이 내장되어 있어 효율적인 포트폴리오 운용이 가능합니다.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="200">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        수익률은 보장되나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">어떤 자동매매 프로그램도 수익률을 보장하지 않습니다. BitMindAI는 장기적인 우상향, 본질적 투자 철학을 추구하며, 투명하게 과거 성과와 실시간 운용 내역을 공개합니다.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="200">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                수익률은 보장되나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">어떤 자동매매 프로그램도 수익률을 보장하지 않습니다. BitMindAI는 장기적인 우상향, 본질적 투자 철학을 추구하며, 투명하게 과거 성과와 실시간 운용 내역을 공개합니다.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="250">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        초보자들이 가장 많이 하는 실수는?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">FOMO, 무리한 올인 투자, 레버리지 남용, 확인되지 않은 루머 맹신, 보안 소홀, 사전 학습 부족 등이 대표적입니다. 감정적 결정보단 학습·전략을 기반으로 투자하세요.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="250">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                초보자들이 가장 많이 하는 실수는?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">FOMO, 무리한 올인 투자, 레버리지 남용, 확인되지 않은 루머 맹신, 보안 소홀, 사전 학습 부족 등이 대표적입니다. 감정적 결정보단 학습·전략을 기반으로 투자하세요.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="300">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        단기 시세 변동에도 유연한가요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">BitMindAI는 단기 시세 변동에 휘둘리기보단 시장의 큰 흐름에 맞춘 전략을 중시합니다. 변동성이 심한 구간은 자동으로 리스크를 조절하거나 방어 전략을 우선시합니다.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="300">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                단기 시세 변동에도 유연한가요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">BitMindAI는 단기 시세 변동에 휘둘리기보단 시장의 큰 흐름에 맞춘 전략을 중시합니다. 변동성이 심한 구간은 자동으로 리스크를 조절하거나 방어 전략을 우선시합니다.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="350">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        최근 성공사례는 어떤 것이 있나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">주요 성공사례 및 성과는 홈페이지 내 ‘성공사례’ 코너 및 데이터 자료실에서 투명하게 공개합니다. 실제 데이터와 함께 최근 트레이딩 실적을 참고하세요.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="350">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                최근 성공사례는 어떤 것이 있나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">주요 성공사례 및 성과는 홈페이지 내 ‘성공사례’ 코너 및 데이터 자료실에서 투명하게 공개합니다. 실제 데이터와 함께 최근 트레이딩 실적을 참고하세요.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="400">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        리스크 관리로 인한 손실을 줄이는 법은?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">계획된 투자비율, 손실 제한(Loss-cut) 시스템과 분산투자, 그리고 감정적 결정을 막는 자동화 알고리즘이 핵심입니다. BitMindAI는 이런 위험 관리 체계를 강화해 적용합니다.</div>
-                </details>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="400">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                리스크 관리로 인한 손실을 줄이는 법은?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">계획된 투자비율, 손실 제한(Loss-cut) 시스템과 분산투자, 그리고 감정적 결정을 막는 자동화 알고리즘이 핵심입니다. BitMindAI는 이런 위험 관리 체계를 강화해 적용합니다.</div>
+                        </details>
 
-                 <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="450">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        고객 데이터와 계정은 어떻게 보호되나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">2단계 인증, 암호화 저장, 안전한 API 키 관리, 외부 접속/침입 실시간 모니터링 등으로 보안에 만전을 기하고 있습니다. 저희는 고객의 계정 정보를 절대로 직접 보관하거나 요구하지 않습니다.</div>
-                </details>
+                         <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="450">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                고객 데이터와 계정은 어떻게 보호되나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">2단계 인증, 암호화 저장, 안전한 API 키 관리, 외부 접속/침입 실시간 모니터링 등으로 보안에 만전을 기하고 있습니다. 저희는 고객의 계정 정보를 절대로 직접 보관하거나 요구하지 않습니다.</div>
+                        </details>
 
-                <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="500">
-                    <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
-                        문의는 어떻게 하나요?
-                        <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">홈페이지 하단의 '문의하기' 버튼을 통해 상담을 요청하시면, BitMindAI의 전문가가 직접 연락드려 궁금한 점을 해결해 드립니다.</div>
-                </details>
-            </div>
-        </section>
+                        <details class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="500">
+                            <summary class="cursor-pointer p-6 list-none flex justify-between items-center text-xl font-bold text-green-400">
+                                문의는 어떻게 하나요?
+                                <span class="text-green-400 transform transition-transform duration-300 ease-in-out details-arrow text-3xl font-light">&plus;</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-300 text-base leading-relaxed">홈페이지 하단의 '문의하기' 버튼을 통해 상담을 요청하시면, BitMindAI의 전문가가 직접 연락드려 궁금한 점을 해결해 드립니다.</div>
+                        </details>
+                    </div>
+                </section>
 
-        <section class="text-center mt-20" data-aos="fade-up">
-            <p class="text-gray-300 text-lg">
-                찾으시는 답변이 없나요?
-                <a href="/contact" class="text-green-400 underline hover:text-green-500 font-semibold transition-colors">전문가에게 직접 문의하기</a>
-            </p>
-        </section>
+                <section class="text-center mt-20" data-aos="fade-up">
+                    <p class="text-gray-300 text-lg">
+                        찾으시는 답변이 없나요?
+                        <a href="/contact.html" class="text-green-400 underline hover:text-green-500 font-semibold transition-colors">전문가에게 직접 문의하기</a>
+                    </p>
+                </section>
             </div>
         </div>
-        <!-- ============================================= -->
-        <!-- 패럴랙스 배경 섹션 끝                          -->
-        <!-- ============================================= -->
     </main>
-
 
     <footer class="py-16 bg-black border-t border-gray-800">
         <div class="container mx-auto max-w-7xl px-4 text-center text-gray-500">
@@ -183,32 +174,6 @@
         </div>
     </footer>
 
-    <script>
-        // 모바일 메뉴 토글
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileCloseBtn = document.getElementById('mobile-close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
-        mobileCloseBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
-        });
-
-        // FAQ 아코디언 아이콘 변경
-        const details = document.querySelectorAll('details');
-        details.forEach((detail) => {
-            detail.addEventListener('toggle', (event) => {
-                const arrow = detail.querySelector('.details-arrow');
-                if (detail.open) {
-                    arrow.textContent = '−';
-                } else {
-                    arrow.textContent = '+';
-                }
-            });
-        });
-    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         // 모바일 메뉴 토글
@@ -223,13 +188,9 @@
             link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
         });
 
-        // ==================================================
-        // FAQ 아코디언 기능 (하나만 열리도록 설정) - 시작
-        // ==================================================
+        // FAQ 아코디언 기능 (하나만 열리도록)
         const allDetails = document.querySelectorAll('details');
-
         allDetails.forEach((detail) => {
-            // 아이콘 변경을 위한 토글 이벤트
             detail.addEventListener('toggle', (event) => {
                 const arrow = detail.querySelector('.details-arrow');
                 if (detail.open) {
@@ -239,11 +200,8 @@
                 }
             });
 
-            // summary 부분을 클릭했을 때 다른 details는 닫히도록 설정
             detail.querySelector('summary').addEventListener('click', (event) => {
-                // 기본 동작(열고 닫기)을 막지 않기 위해 summary에만 click 이벤트를 추가합니다.
-                if (detail.open) return; // 이미 열려있는 것을 다시 클릭해서 닫을 때는 다른 것을 건드리지 않음
-
+                if (detail.open) return;
                 allDetails.forEach((otherDetail) => {
                     if (otherDetail !== detail) {
                         otherDetail.removeAttribute('open');
@@ -251,12 +209,8 @@
                 });
             });
         });
-        // ==================================================
-        // FAQ 아코디언 기능 - 끝
-        // ==================================================
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+
+        // AOS 초기화
         AOS.init({ 
             duration: 800, 
             once: true,
