@@ -85,12 +85,15 @@
   <main>
     <!-- Hero Section -->
     <section class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <!-- 배경 이미지 및 어두운 오버레이 -->
       <div class="absolute inset-0 z-0">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover">
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-futuristic-wireframe-mesh-and-particles-43400-large.mp4" type="video/mp4">
-        </video>
-        <div class="absolute inset-0 bg-black/70"></div>
+        <!-- 새로 업로드한 이미지 적용 -->
+        <img src="images/index_main.jpg" alt="데이터 분석 및 네트워크 배경" class="w-full h-full object-cover">
+        <!-- 어둡고 불투명한 효과를 위한 오버레이 -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
       </div>
+      
+      <!-- 텍스트 및 버튼 콘텐츠 -->
       <div class="relative z-10 text-center w-full px-4">
         <div class="overflow-hidden">
           <h1 data-aos="fade-up" data-aos-delay="200" class="text-4xl md:text-6xl font-black leading-snug mb-6">
@@ -378,5 +381,6 @@
   </script>
 </body>
 </html>
+
 
 
