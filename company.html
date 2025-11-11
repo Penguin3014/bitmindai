@@ -57,74 +57,83 @@
         </nav>
     </div>
 
-    <main>
-        <div class="relative bg-fixed bg-cover bg-center" style="background-image: url('images/company_bg.jpg');">
-            <div class="absolute inset-0 bg-black/80"></div>
-            <div class="relative">
+<main>
+    <!-- 1. 대표 인사말 (Hero) -->
+    <section class="relative pt-48 pb-24 overflow-hidden">
+        <!-- 배경 이미지 및 어두운 오버레이 -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/company_1.jpg" alt="회사 비전 배경" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
 
-                <!-- 1. 대표 인사말 (Hero) -->
-                <section class="pt-48 pb-24">
-                    <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-16 items-center">
-                        <div class="text-center md:text-left" data-aos="fade-right">
-                             <p class="text-lg text-green-400 font-semibold mb-4">A Letter from the CEO</p>
-                             <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6">
-                                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">실패로부터 얻은 교훈</span>이<br>지금의 BitMindAI를 만들었습니다.
-                             </h1>
-                             <p class="mt-8 text-xl text-gray-400">안녕하세요. BitMindAI 대표 OOO입니다.</p>
-                        </div>
-                        <div data-aos="fade-left" data-aos-delay="200">
-                             <img src="images/ceo-profile.jpg" alt="BitMindAI 대표 프로필 사진" class="rounded-2xl shadow-2xl w-full max-w-sm mx-auto">
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 2. 개발 스토리 -->
-                <section class="py-24">
-                    <div class="container mx-auto max-w-3xl px-4 space-y-16 text-lg md:text-xl text-gray-300 leading-loose">
-                        <div class="text-center" data-aos="fade-up">
-                            <p>저는 지금 이 자리에 오기까지 수많은 실패를 겪었고,<br>그 실패를 통해 얻은 교훈이 바로 지금의 회사를 만들게 한 원동력이 되었습니다.</p>
-                            <p class="mt-4">잠시 제 이야기를 해볼까요?</p>
-                        </div>
-
-                        <p data-aos="fade-up">저는 지금까지 수십 개의 자동매매 프로그램을 만들었습니다. RSI, MACD, 이동평균선과 같은 온갖 보조지표를 활용했죠. 세상에 공개된 수많은 정보들을 모두 접목시켜 프로그램을 만들었지만, 결과적으로 여러 번의 청산을 경험했습니다.</p>
-                        
-                        <div data-aos="zoom-in" class="bg-white/5 backdrop-blur-md p-10 rounded-2xl my-12 border border-white/10">
-                            <blockquote class="text-3xl md:text-4xl font-bold italic text-center text-white">
-                                "왜 이런 일이 반복될까?"
-                            </blockquote>
-                        </div>
-
-                        <p data-aos="fade-up">그때마다 저는 스스로에게 질문했고, 실패를 분석하는 과정에서 한 가지 중요한 사실을 깨달았습니다. 단순히 개별적인 지표나 하나의 전략에 집착해서는 안 된다는 것이었죠. 그리고 더 중요한 교훈은 이것이었습니다.</p>
-
-                        <div data-aos="zoom-in-up" class="bg-yellow-900/10 backdrop-blur-md p-10 rounded-2xl my-12 border border-yellow-400/20 shadow-2xl">
-                            <p class="text-xl md:text-2xl font-bold text-center text-yellow-300 flex items-center justify-center gap-x-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle flex-shrink-0"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-                                "청산은 단순히 하나의 손실이 아니라, 전체 투자 전략의 균형을 무너뜨리는 가장 큰 위험이다."
-                            </p>
-                        </div>
-
-                        <p data-aos="fade-up">저는 이 교훈을 바탕으로, 데이터를 제대로 다루고 시장의 큰 흐름을 파악하는 것이 무엇보다 중요하다는 사실을 알게 되었습니다. 이런 경험들이 결국 오늘날 BitMindAI 프로그램을 만들어낸 밑거름이 되었습니다.</p>
-                    </div>
-                </section>
-
-                <!-- 3. 철학 및 마무리 -->
-                <section class="py-24">
-                    <div class="container mx-auto max-w-3xl px-4 text-center space-y-6 text-lg md:text-xl text-gray-300 leading-loose" data-aos="fade-up">
-                        <p>물론 저희 프로그램을 사용하지 않으셔도 괜찮습니다.</p>
-                        <p>다만 BitMindAI가 하나의 기준점이 되어, 여러분의 투자에 필요한 최적의 방법을 찾는 데 도움이 된다면 저희는 그것만으로도 충분히 의미가 있다고 생각합니다.</p>
-                        <p class="mt-6">
-                            지금도 저희 BitMindAI 팀원들은 그 누구보다 더 나은 데이터 기반의 자동매매 시스템을 제공하기 위해 끊임없이 노력하고 있습니다. 저희 프로그램이 여러분의 투자 여정에 작은 도움이 될 수 있다면, 그것이 저희에게는 가장 큰 보람입니다.
-                        </p>
-                        <div class="pt-16 flex flex-col items-center">
-                            <img src="images/ceo-signature.png" alt="대표 서명" class="h-16 w-auto mb-4">
-                            <p class="text-2xl font-light text-gray-400 tracking-wider">BitMindAI 대표 OOO</p>
-                        </div>
-                    </div>
-                </section>
-
+        <!-- 콘텐츠 -->
+        <div class="relative z-10 container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div class="text-center md:text-left" data-aos="fade-right">
+                 <p class="text-lg text-green-400 font-semibold mb-4">A Letter from the CEO</p>
+                 <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">실패로부터 얻은 교훈</span>이<br>지금의 BitMindAI를 만들었습니다.
+                 </h1>
+                 <p class="mt-8 text-xl text-gray-400">안녕하세요. BitMindAI 대표 OOO입니다.</p>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                 <img src="images/ceo-profile.jpg" alt="BitMindAI 대표 프로필 사진" class="rounded-2xl shadow-2xl w-full max-w-sm mx-auto">
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 패럴랙스 배경을 적용할 섹션 시작                  -->
+    <!-- ============================================= -->
+    <div class="relative bg-fixed bg-cover bg-center" style="background-image: url('images/company_bg.jpg');">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <div class="relative">
+
+            <!-- 2. 개발 스토리 -->
+            <section class="py-24">
+                <div class="container mx-auto max-w-3xl px-4 space-y-16 text-lg md:text-xl text-gray-300 leading-loose">
+                    <div class="text-center" data-aos="fade-up">
+                        <p>저는 지금 이 자리에 오기까지 수많은 실패를 겪었고,<br>그 실패를 통해 얻은 교훈이 바로 지금의 회사를 만들게 한 원동력이 되었습니다.</p>
+                        <p class="mt-4">잠시 제 이야기를 해볼까요?</p>
+                    </div>
+
+                    <p data-aos="fade-up">저는 지금까지 수십 개의 자동매매 프로그램을 만들었습니다. RSI, MACD, 이동평균선과 같은 온갖 보조지표를 활용했죠. 세상에 공개된 수많은 정보들을 모두 접목시켜 프로그램을 만들었지만, 결과적으로 여러 번의 청산을 경험했습니다.</p>
+                    
+                    <div data-aos="zoom-in" class="bg-white/5 backdrop-blur-md p-10 rounded-2xl my-12 border border-white/10">
+                        <blockquote class="text-3xl md:text-4xl font-bold italic text-center text-white">
+                            "왜 이런 일이 반복될까?"
+                        </blockquote>
+                    </div>
+
+                    <p data-aos="fade-up">그때마다 저는 스스로에게 질문했고, 실패를 분석하는 과정에서 한 가지 중요한 사실을 깨달았습니다. 단순히 개별적인 지표나 하나의 전략에 집착해서는 안 된다는 것이었죠. 그리고 더 중요한 교훈은 이것이었습니다.</p>
+
+                    <div data-aos="zoom-in-up" class="bg-yellow-900/10 backdrop-blur-md p-10 rounded-2xl my-12 border border-yellow-400/20 shadow-2xl">
+                        <p class="text-xl md:text-2xl font-bold text-center text-yellow-300 flex items-center justify-center gap-x-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle flex-shrink-0"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                            "청산은 단순히 하나의 손실이 아니라, 전체 투자 전략의 균형을 무너뜨리는 가장 큰 위험이다."
+                        </p>
+                    </div>
+
+                    <p data-aos="fade-up">저는 이 교훈을 바탕으로, 데이터를 제대로 다루고 시장의 큰 흐름을 파악하는 것이 무엇보다 중요하다는 사실을 알게 되었습니다. 이런 경험들이 결국 오늘날 BitMindAI 프로그램을 만들어낸 밑거름이 되었습니다.</p>
+                </div>
+            </section>
+
+            <!-- 3. 철학 및 마무리 -->
+            <section class="py-24">
+                <div class="container mx-auto max-w-3xl px-4 text-center space-y-6 text-lg md:text-xl text-gray-300 leading-loose" data-aos="fade-up">
+                    <p>물론 저희 프로그램을 사용하지 않으셔도 괜찮습니다.</p>
+                    <p>다만 BitMindAI가 하나의 기준점이 되어, 여러분의 투자에 필요한 최적의 방법을 찾는 데 도움이 된다면 저희는 그것만으로도 충분히 의미가 있다고 생각합니다.</p>
+                    <p class="mt-6">
+                        지금도 저희 BitMindAI 팀원들은 그 누구보다 더 나은 데이터 기반의 자동매매 시스템을 제공하기 위해 끊임없이 노력하고 있습니다. 저희 프로그램이 여러분의 투자 여정에 작은 도움이 될 수 있다면, 그것이 저희에게는 가장 큰 보람입니다.
+                    </p>
+                    <div class="pt-16 flex flex-col items-center">
+                        <img src="images/ceo-signature.png" alt="대표 서명" class="h-16 w-auto mb-4">
+                        <p class="text-2xl font-light text-gray-400 tracking-wider">BitMindAI 대표 OOO</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
 
     <footer class="py-16 bg-black border-t border-gray-800">
         <div class="container mx-auto max-w-7xl px-4 text-center text-gray-500">
@@ -161,3 +170,4 @@
     </script>
 </body>
 </html>
+
