@@ -43,40 +43,38 @@
 <body class="text-white">
 
   <!-- ===== 헤더 ===== -->
-  <header class="w-full fixed top-0 left-0 z-50 bg-gray-50 border-b border-gray-200">
-    <div class="container mx-auto max-w-6xl px-4 h-20 flex justify-between items-center">
-      <a href="/" class="flex items-center space-x-4">
-        <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-12 w-auto" />
+  <header class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
+    <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-10 w-auto" />
         <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
       </a>
-      <nav class="hidden md:flex items-center space-x-10">
-        <a href="/company" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
-        <a href="/service" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
-        <a href="/faq" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/company" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">회사 소개</a>
+        <a href="/service" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+        <a href="/faq" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">FAQ</a>
         <a href="/contact" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
       </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-black p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </button>
     </div>
   </header>
 
   <!-- 모바일 메뉴 -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 md:hidden"
-    style="background: linear-gradient(135deg, rgba(70, 70, 70, 0.95) 0%, rgba(40, 40, 40, 0.95) 100%);">
-    <div class="flex justify-end p-4 h-16 border-b border-gray-600/50">
+  <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden bg-gray-900/95 backdrop-blur-sm">
+    <div class="flex justify-end p-4 h-20">
       <button id="mobile-close-btn" class="text-white p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
       </button>
     </div>
-<nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
-  <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">홈</a>
-  <a href="/company" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">회사 소개</a>
-  <a href="/service" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">서비스 소개</a>
-  <a href="/faq" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">FAQ</a>
-  <a href="/contact" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
-</nav>
+    <nav class="flex flex-col items-center justify-center h-[calc(100vh-5rem)] space-y-10">
+      <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
+      <a href="/company" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
+      <a href="/service" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
+      <a href="/faq" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">FAQ</a>
+      <a href="/contact" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
+    </nav>
   </div>
 
   <main>
@@ -293,4 +291,5 @@
   </script>
 </body>
 </html>
+
 
