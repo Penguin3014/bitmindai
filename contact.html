@@ -1,86 +1,84 @@
 <!DOCTYPE html>
-<html lang="ko" class="dark">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문의하기 - BitMindAI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide-react/dist/umd/lucide-react.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', 'Noto Sans KR', sans-serif; }
+        body { 
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: #0A0A0A;
+        }
     </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-black text-white">
+<body class="bg-black text-white">
 
-<!-- ===== 헤더 ===== -->
-<header class="w-full fixed top-0 left-0 z-50 bg-gray-50 border-b border-gray-200">
-    <div class="container mx-auto max-w-6xl px-4 h-20 flex justify-between items-center">
-      <a href="/" class="flex items-center space-x-4">
-        <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-12 w-auto" />
-        <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
-      </a>
-      <nav class="hidden md:flex items-center space-x-10">
-        <a href="/company" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
-        <a href="/service" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
-        <a href="/faq" class="text-black font-black text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
-        <a href="/contact" class="text-green-600 font-black text-xl transition-colors duration-200">문의하기</a>
-      </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-black p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      </button>
-    </div>
-</header>
+    <!-- ===== 헤더 ===== -->
+    <header class="w-full fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
+        <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-3">
+                <img src="images/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-10 w-auto" />
+                <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/company" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">회사 소개</a>
+                <a href="/service" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+                <a href="/faq" class="text-gray-800 font-bold text-lg hover:text-green-600 transition-colors duration-200">FAQ</a>
+                <a href="/contact" class="text-green-600 font-bold text-lg transition-colors duration-200">문의하기</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
 
-<!-- ===== 모바일 메뉴 (공통 스타일) ===== -->
-<div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 md:hidden"
-    style="background: linear-gradient(135deg, rgba(70, 70, 70, 0.95) 0%, rgba(40, 40, 40, 0.95) 100%);">
-    <div class="flex justify-end p-4 h-16 border-b border-gray-600/50">
-      <button id="mobile-close-btn" class="text-white p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-      </button>
-    </div>
-    <nav class="flex flex-col items-center justify-center h-[calc(100vh-4rem)] space-y-8">
-        <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">홈</a>
-        <a href="/company" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">회사 소개</a>
-        <a href="/service" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">서비스 소개</a>
-        <a href="/faq" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">FAQ</a>
-        <a href="/contact" class="text-green-400 font-bold text-3xl hover:text-green-600 mobile-link">문의하기</a>
-    </nav>
-</div>
-
-
-<!-- ===== 메인 컨텐츠 ===== -->
-<main>
-    <section id="contact-form" class="pt-36 pb-20">
-        <div class="container mx-auto max-w-3xl px-4 text-center">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">문의하기</h1>
-            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
-                성급하게 문의하실 필요 없습니다.<br class="hidden md:block">
-                최대한 구체적으로 작성해 주실수록 더욱 정확한 안내를 받아보실 수 있습니다.
-            </p>
- <!-- ===== 문의 폼 (개인정보 처리방침 전문 적용) ===== -->
-<form action="https://formspree.io/f/xeopydva" method="POST" class="text-left space-y-6 bg-gray-800 p-8 rounded-lg border border-gray-700">
-    
-    <!-- 이름 입력란 -->
-    <div>
-        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">이름</label>
-        <input type="text" name="name" id="name" required class="w-full bg-gray-700 border-gray-600 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500">
+    <!-- ===== 모바일 메뉴 ===== -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden bg-gray-900/95 backdrop-blur-sm">
+        <div class="flex justify-end p-4 h-20">
+            <button id="mobile-close-btn" class="text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-[calc(100vh-5rem)] space-y-10">
+            <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
+            <a href="/company" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
+            <a href="/service" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
+            <a href="/faq" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">FAQ</a>
+            <a href="/contact" class="text-green-500 font-bold text-3xl mobile-link">문의하기</a>
+        </nav>
     </div>
 
-    <!-- 이메일 입력란 -->
-    <div>
-        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">이메일</label>
-        <input type="email" name="email" id="email" required class="w-full bg-gray-700 border-gray-600 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500">
-    </div>
-
-    <!-- 문의 내용 입력란 -->
-    <div>
-        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">문의 내용</label>
-        <textarea name="message" id="message" rows="6" required class="w-full bg-gray-700 border-gray-600 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500"></textarea>
-    </div>
+    <!-- ===== 메인 컨텐츠 ===== -->
+    <main>
+        <section id="contact-form" class="pt-48 pb-24 bg-gray-900">
+            <div class="container mx-auto max-w-3xl px-4 text-center">
+                <h1 class="text-5xl md:text-6xl font-black mb-6" data-aos="fade-up">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">전문가와 상담</span>하고<br>새로운 기회를 잡으세요.
+                </h1>
+                <p class="text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    성급하게 문의하실 필요 없습니다.<br class="hidden md:block">
+                    최대한 구체적으로 작성해 주실수록 더욱 정확한 안내를 받아보실 수 있습니다.
+                </p>
+                
+                <form action="YOUR_FORMSPREE_URL" method="POST" class="text-left space-y-6 bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">이름</label>
+                        <input type="text" name="name" id="name" required class="w-full bg-gray-900/50 border-gray-700 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">연락처(전화번호 및 이메일)</label>
+                        <input type="email" name="email" id="email" required class="w-full bg-gray-900/50 border-gray-700 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">문의 내용</label>
+                        <textarea name="message" id="message" rows="6" required class="w-full bg-gray-900/50 border-gray-700 text-white rounded-md p-3 focus:ring-green-500 focus:border-green-500 transition"></textarea>
+                    </div>
 
     <!-- ===== 개인정보 수집 및 이용 동의 (새로운 내용 적용) ===== -->
     <div>
@@ -162,47 +160,49 @@
             </label>
         </div>
     </div>
-    <!-- ============================================= -->
 
-    <!-- 전송 버튼 -->
-    <div class="text-center pt-4">
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-10 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105">
-            문의 전송하기
-        </button>
-    </div>
-</form>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-12 py-4 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-900/40">
+                            문의 전송하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<footer class="py-12 border-t border-gray-700">
-    <div class="container mx-auto max-w-6xl px-4 text-center text-gray-500">
-        <p class="font-semibold text-gray-300 text-lg mb-4">BitMindAI</p>
-        <p class="mb-2 text-sm">
-            대표: 윤태욱 | 사업자등록번호: 000-00-00000<br>
-            주소: 서울특별시 강남구 테헤란로 000 (역삼동)<br>
-            문의: <a href="mailto:contact@BitMindAI.com" class="underline text-gray-400 hover:text-green-400">contact@BitMindAI.com</a> | 대표번호: 02-0000-0000
-        </p>
-        <p class="text-xs">© 2025 BitMindAI. All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer class="py-16 bg-black border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl px-4 text-center text-gray-500">
+            <p class="font-semibold text-white text-xl mb-6">BitMindAI</p>
+            <div class="space-y-2 text-sm mb-8">
+                <p>대표: 윤태욱 | 사업자등록번호: 000-00-00000</p>
+                <p>주소: 서울특별시 강남구 테헤란로 000 (역삼동)</p>
+                <p>문의: <a href="mailto:contact@bitmindai.kr" class="underline text-gray-400 hover:text-green-400">contact@bitmindai.kr</a> | 대표번호: 02-0000-0000</p>
+            </div>
+            <p class="text-xs text-gray-600">© 2025 BitMindAI. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileCloseBtn = document.getElementById('mobile-close-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-    mobileMenuBtn.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('translate-x-full')) {
-        mobileMenu.classList.remove('translate-x-full');
-      } else {
-        mobileMenu.classList.add('translate-x-full');
-      }
-    });
-    mobileCloseBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('translate-x-full');
-    });
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-      });
-    });
-</script>
-<script src="https
+    <script>
+        // 모바일 메뉴 토글
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+        mobileCloseBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>
