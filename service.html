@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스 소개 - BitMindAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', 'Noto Sans KR', sans-serif; 
+            background-color: #0A0A0A;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- ===== 헤더(공통) ===== -->
+  <header class="w-full fixed top-0 left-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200/50">
+        <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-3">
+                <img src="assets/images/common/logo_c_gradation_no_text.png" alt="BitMindAI 로고" class="h-10 w-auto" />
+                <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+        <a href="/company.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
+        <a href="/service.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+        <a href="/faq.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
+                <a href="/contact.html" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== 모바일 메뉴 ===== -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden bg-gray-900/95 backdrop-blur-sm">
+        <div class="flex justify-end p-4 h-20">
+            <button id="mobile-close-btn" class="text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center h-[calc(100vh-5rem)] space-y-10">
+            <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
+            <a href="/company.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
+            <a href="/service.html" class="text-green-500 font-bold text-3xl mobile-link">서비스 소개</a>
+            <a href="/faq.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">FAQ</a>
+            <a href="/contact.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
+        </nav>
+    </div>
+
+<main>
+    <!-- 도입부 -->
+    <section class="relative pt-48 pb-24 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/service/service_1.jpg" alt="서비스 소개 배경" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/85"></div>
+        </div>
+        <div class="relative container mx-auto max-w-4xl px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">
+                <span class="block leading-[1.3]">내 시드를 맡길 프로그램이 없어서</span>
+                <span class="block leading-[1.3] bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">직접 개발했습니다.</span>
+            </h1>
+            <p class="text-lg text-gray-400 mt-8">왜 지금까지 당신의 투자가 실패했는지 알려드리겠습니다.</p>
+        </div>
+    </section>
+
+    <!-- 실패 원인 분석 (패럴랙스 적용) -->
+    <div class="relative bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('assets/images/service/service_2.jpg');">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <section class="relative py-24">
+            <div class="container mx-auto max-w-7xl px-4">
+                <h2 class="text-center text-4xl md:text-5xl font-extrabold mb-16" data-aos="fade-up">투자를 실패하는 <span class="text-red-500">3가지 원인</span></h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-red-900/50 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="M12 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-4z"/><path d="M12 8V6a2 2 0 1 1 4 0v2"/><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-red-400">감정적 매매 (FOMO)</h3>
+                        <p class="text-gray-300 leading-relaxed">"놓치면 안된다"는 공포와 탐욕은 비합리적인 추격 매수와 투매를 유발하여 결국 손실로 이어집니다.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-red-900/50 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-red-400">잘못된 리스크 관리</h3>
+                        <p class="text-gray-300 leading-relaxed">초/분봉 차트에 의존한 뇌동매매, 자산 대비 과도한 비중과 레버리지 설정은 리스크 관리 실패의 주 원인입니다.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-red-900/50 flex items-center justify-center">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="M12 18.5A6.5 6.5 0 1 0 5.5 12a6.5 6.5 0 0 0 6.5 6.5z"/><path d="M12 8v4l2 2"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-red-400">불확실한 정보 의존</h3>
+                        <p class="text-gray-300 leading-relaxed">커뮤니티와 지인에게서 얻은 확인되지 않은 루머나 조언에 의존한 투자는 잘못된 확신을 낳고 큰 손실을 부릅니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- BitMindAI의 차별점 -->
+    <section class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/service/service_3.jpg" alt="BitMindAI 차별점 배경" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/85"></div>
+        </div>
+        <div class="relative container mx-auto max-w-7xl px-4 text-center z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12" data-aos="fade-up">그렇다면 <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">BitMindAI</span>는 무엇이 다를까요?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+                     <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M12 2l-8 4 8 4 8-4-8-4z"/><path d="M4 10l8 4 8-4"/><path d="M4 18l8-4 8 4"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">데이터 기반 전략 공유</h3>
+                    <p class="text-gray-300 leading-relaxed">단순히 프로그램만 제공하지 않습니다. 시장을 이기는 최적화된 데이터 값을 공유하며, 시행착오는 저희가 전부 겪고 결과만 드립니다.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M20 12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7.5"/><path d="M16 19h6"/><path d="M19 16l3 3-3 3"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">투명한 연구 과정 공개</h3>
+                    <p class="text-gray-300 leading-relaxed">개발팀은 더 나은 솔루션을 위해 끊임없이 연구하며, 그 모든 분석 과정과 업데이트 내역을 고객과 투명하게 공유합니다.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-center mb-6">
+                         <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">우리가 직접 쓰는 프로그램</h3>
+                    <p class="text-gray-300 leading-relaxed">저희가 직접 사용하고 수익을 검증하지 않은 프로그램은 절대 권유하지 않습니다. 이는 BitMindAI의 철칙입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로그램 소개 -->
+    <section class="relative py-32 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('assets/images/service/service_4.jpg');">
+            <div class="absolute inset-0 bg-black/85"></div>
+        </div>
+        <div class="relative container mx-auto max-w-4xl px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+                <span class="block leading-[1.3]">일반 자동매매 프로그램과는</span>
+                <span class="block leading-[1.3] bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">비교를 거부합니다.</span>
+            </h2>
+            <p class="text-lg text-gray-200 mt-6 mb-10">BitMindAI는 독창적인 AI 로직을 통해 높은 안정성과 수익성을 제공하여<br>시드 자금의 꾸준한 우상향을 목표로 합니다.</p>
+            <a href="/contact.html" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-10 py-4 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-900/40">
+                BitMindAI 문의하기 &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- 마지막 CTA -->
+    <section class="relative py-24 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/service/service_5.jpg" alt="BitMindAI CTA 배경" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/85"></div>
+        </div>
+        <div class="relative container mx-auto max-w-3xl px-4 text-center z-10" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">BitMindAI</span>는 당신의 성공만 생각합니다.
+            </h2>
+            <p class="text-lg text-gray-400 leading-relaxed">꼭 프로그램을 구매하지 않으셔도 좋습니다.<br> 저희가 제공하는 정보와 시장 분석만으로도 당신의 투자 전략은 한 단계 성장할 수 있습니다. 꼼꼼히 알아보시고, 그럼에도 AI 자동매매의 힘이 필요하시다면 언제든 문을 두드려주세요.</p>
+        </div>
+    </section>
+</main>
+
+<footer
+  class="relative py-16 border-t border-gray-800"
+  style="
+    background-image: url('assets/images/common/putter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.95); z-index:0;"></div>
+
+  <div class="relative container mx-auto max-w-7xl px-4 text-center text-gray-500 z-10">
+    <p class="font-semibold text-white text-2xl md:text-3xl mb-6" style="font-size:1.5em;">BitMindAI</p>
+    <div class="space-y-2 text-sm mb-8">
+      <p>대표: 서원진 | 사업자 등록번호: 371-81-03325</p>
+      <p>주소: 경기도 성남시 분당구 판교역로10번길 6, 1동 피07호(백현동)</p>
+      <p>
+        문의:
+        <a href="/contact.html" class="underline text-gray-400 hover:text-green-400">
+          contact@bitmindai.kr
+        </a>
+      </p>
+    </div>
+    <p class="text-xs text-gray-600">© 2025 BitMindAI. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+    // 모바일 메뉴 토글
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+    mobileCloseBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+    });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+    });
+</script>
+</body>
+</html>
