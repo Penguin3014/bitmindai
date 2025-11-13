@@ -34,63 +34,55 @@
 <body class="bg-black text-white">
 
     <!-- ===== 헤더(공통) ===== -->
-  <header class="w-full fixed top-0 left-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200/50">
-        <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
-            <a href="/" class="flex items-center space-x-3">
-                <img src="assets/images/common/logo_c_gradation_no_text.webp" alt="BitMindAI 로고" class="h-10 w-auto" loading="lazy" />
-                <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8">
-        <a href="/company.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
-        <a href="/service.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
-        <a href="/faq.html" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
-                <a href="/contact.html" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
-            </nav>
-            <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-        </div>
-    </header>
+<header class="w-full fixed top-0 left-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200/50">
+    <div class="container mx-auto max-w-7xl px-4 h-20 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+            <img src="/assets/images/common/logo_c_gradation_no_text.webp" alt="BitMindAI 로고" class="h-10 w-auto" loading="lazy" />
+            <span class="text-3xl font-extrabold text-green-600">BitMindAI</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="/company/" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">회사 소개</a>
+            <a href="/service/" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">서비스 소개</a>
+            <a href="/faq/" class="text-gray-800 font-bold text-xl hover:text-green-600 transition-colors duration-200">FAQ</a>
+            <a href="/contact/" class="text-white bg-green-600 hover:bg-green-700 font-bold text-lg px-5 py-2.5 rounded-full transition-colors duration-200">문의하기</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-800 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+    </div>
+</header>
 
-      <!-- 모바일 메뉴 -->
 <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden bg-gray-900/95 backdrop-blur-sm">
     <div class="flex justify-end items-center px-6 h-20">
-      <button id="mobile-close-btn" class="text-white p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
+        <button id="mobile-close-btn" class="text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
     </div>
-    
-    <!-- justify-start로 위에서부터 시작 + pt-24 추가 -->
     <div class="flex flex-col items-center justify-start pt-24 h-[calc(100vh-8rem)] px-6 text-center text-white space-y-16">
-      <!-- 텍스트 -->
-      <div class="space-y-3">
-        <p class="text-4xl font-bold text-green-400">데이터 기반</p>
-        <p class="text-4xl font-bold">자동 매매 솔루션</p>
-        <p class="text-4xl font-bold text-gray-300">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">BitMindAI</span>입니다.
-        </p>
-      </div>
-      
-      <!-- 메뉴 -->
-      <nav class="flex flex-col items-center space-y-8">
-        <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
-        <a href="/company.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
-        <a href="/service.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
-        <a href="/faq.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">FAQ</a>
-        <a href="/contact.html" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
-      </nav>
+        <div class="space-y-3">
+            <p class="text-4xl font-bold text-green-400">데이터 기반</p>
+            <p class="text-4xl font-bold">자동 매매 솔루션</p>
+            <p class="text-4xl font-bold text-gray-300">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-400">BitMindAI</span>입니다.
+            </p>
+        </div>
+        <nav class="flex flex-col items-center space-y-8">
+            <a href="/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">홈</a>
+            <a href="/company/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">회사 소개</a>
+            <a href="/service/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">서비스 소개</a>
+            <a href="/faq/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">FAQ</a>
+            <a href="/contact/" class="text-green-400 font-bold text-3xl hover:text-green-500 mobile-link">문의하기</a>
+        </nav>
     </div>
-    
     <div class="absolute bottom-8 inset-x-0 text-center text-sm text-gray-400">
-      © 2025 BitMindAI. All Rights Reserved.
+        © 2025 BitMindAI. All Rights Reserved.
     </div>
-  </div>
+</div>
 
 <main>
-    <!-- 도입부 -->
     <section class="relative pt-48 pb-24 text-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/service/service_1.webp" alt="서비스 소개 배경" class="w-full h-full object-cover" loading="lazy">
+            <img src="/assets/images/service/service_1.webp" alt="서비스 소개 배경" class="w-full h-full object-cover" loading="lazy">
             <div class="absolute inset-0 bg-black/85"></div>
         </div>
         <div class="relative container mx-auto max-w-4xl px-4 animate-fade-up">
@@ -117,8 +109,7 @@
         </div>
     </section>
 
-    <!-- 실패 원인 분석 (패럴랙스 적용) -->
-    <div class="relative bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('assets/images/service/service_2.webp');">
+    <div class="relative bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('/assets/images/service/service_2.webp');">
         <div class="absolute inset-0 bg-black/85"></div>
         <section class="relative py-24">
             <div class="container mx-auto max-w-7xl px-4">
@@ -163,16 +154,8 @@
         </section>
     </div>
 
-    <!-- BitMindAI의 차별점 -->
     <section class="relative py-24 overflow-hidden">
-        <div class="absolute inset-0 z-0" style="
-            background-image: url('assets/images/service/service_3.webp');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            transform: scale(3.1);
-            transform-origin: center;
-        ">
+        <div class="absolute inset-0 z-0" style="background-image: url('/assets/images/service/service_3.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat; transform: scale(3.1); transform-origin: center;">
             <div class="absolute inset-0 bg-black/90"></div>
         </div>
         <div class="relative container mx-auto max-w-7xl px-4 text-center z-10">
@@ -187,7 +170,7 @@
             </h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50 animate-fade-up" style="animation-delay: 0.1s;">
-                     <div class="flex justify-center mb-6">
+                    <div class="flex justify-center mb-6">
                         <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M12 2l-8 4 8 4 8-4-8-4z"/><path d="M4 10l8 4 8-4"/><path d="M4 18l8-4 8 4"/></svg>
                         </div>
@@ -198,7 +181,7 @@
                 <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50 animate-fade-up" style="animation-delay: 0.2s;">
                     <div class="flex justify-center mb-6">
                         <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M20 12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7.5"/><path d="M16 19h6"/><path d="M19 16l3 3-3 3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M20 12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7.5"/><path d="M16 19h6"/><path d="M19 16l3 3-3 3"/></svg>
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-green-400">투명한 연구 과정 공개</h3>
@@ -206,7 +189,7 @@
                 </div>
                 <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700/50 animate-fade-up" style="animation-delay: 0.3s;">
                     <div class="flex justify-center mb-6">
-                         <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
+                        <div class="w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
                     </div>
@@ -217,9 +200,8 @@
         </div>
     </section>
 
-    <!-- 프로그램 소개 -->
     <section class="relative py-32 text-center overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('assets/images/service/service_4.webp');">
+        <div class="absolute inset-0 z-0 bg-scroll md:bg-fixed bg-cover bg-center" style="background-image: url('/assets/images/service/service_4.webp');">
             <div class="absolute inset-0 bg-black/85"></div>
         </div>
         <div class="relative container mx-auto max-w-4xl px-4 animate-fade-up">
@@ -239,16 +221,15 @@
                     BitMindAI는 독창적인 AI 로직을 통해 높은 안정성과 수익성을 제공하여<br>시드 자금의 꾸준한 우상향을 목표로 합니다.
                 </span>
             </p>
-            <a href="/contact.html" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-10 py-4 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-900/40">
+            <a href="/contact/" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-10 py-4 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-900/40">
                 BitMindAI 문의하기 &rarr;
             </a>
         </div>
     </section>
 
-    <!-- 마지막 CTA -->
     <section class="relative py-24 text-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/service/service_5.webp" alt="BitMindAI CTA 배경" class="w-full h-full object-cover" loading="lazy">
+            <img src="/assets/images/service/service_5.webp" alt="BitMindAI CTA 배경" class="w-full h-full object-cover" loading="lazy">
             <div class="absolute inset-0 bg-black/85"></div>
         </div>
         <div class="relative container mx-auto max-w-3xl px-4 text-center z-10 animate-fade-up">
@@ -266,35 +247,23 @@
     </section>
 </main>
 
-<footer
-  class="relative py-16 border-t border-gray-800"
-  style="
-    background-image: url('assets/images/common/putter.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  "
->
-  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.95); z-index:0;"></div>
-
-  <div class="relative container mx-auto max-w-7xl px-4 text-center text-gray-500 z-10">
-    <p class="font-semibold text-white text-2xl md:text-3xl mb-6" style="font-size:1.5em;">BitMindAI</p>
-    <div class="space-y-2 text-sm mb-8">
-      <p>대표: 서원진 | 사업자 등록번호: 371-81-03325</p>
-      <p>주소: 경기도 성남시 분당구 판교역로10번길 6, 1동 피07호(백현동)</p>
-      <p>
-        문의:
-        <a href="/contact.html" class="underline text-gray-400 hover:text-green-400">
-          contact@bitmindai.kr
-        </a>
-      </p>
+<footer class="relative py-16 border-t border-gray-800" style="background-image: url('/assets/images/common/putter.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.95); z-index:0;"></div>
+    <div class="relative container mx-auto max-w-7xl px-4 text-center text-gray-500 z-10">
+        <p class="font-semibold text-white text-2xl md:text-3xl mb-6" style="font-size:1.5em;">BitMindAI</p>
+        <div class="space-y-2 text-sm mb-8">
+            <p>대표: 서원진 | 사업자 등록번호: 371-81-03325</p>
+            <p>주소: 경기도 성남시 분당구 판교역로10번길 6, 1동 피07호(백현동)</p>
+            <p>
+                문의:
+                <a href="/contact/" class="underline text-gray-400 hover:text-green-400">contact@bitmindai.kr</a>
+            </p>
+        </div>
+        <p class="text-xs text-gray-600">© 2025 BitMindAI. All Rights Reserved.</p>
     </div>
-    <p class="text-xs text-gray-600">© 2025 BitMindAI. All Rights Reserved.</p>
-  </div>
 </footer>
 
 <script>
-    // 모바일 메뉴 토글
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -312,5 +281,6 @@
         link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
     });
 </script>
+
 </body>
 </html>
